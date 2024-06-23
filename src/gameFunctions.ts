@@ -367,7 +367,7 @@ export const checkAchievements = (
 ): Achievement[] => {
   let newAchievements = [...achievements];
 
-  if (!newAchievements[0].isUnlocked) {
+  if (!newAchievements[0].isUnlocked && hero.gold > 0) {
     newAchievements[0].isUnlocked = true;
     logMessage("Achievement unlocked: First Blood");
   }
