@@ -31,6 +31,8 @@ const GameLog: React.FC<GameLogProps> = React.memo(({ logs }) => {
             if (log.includes("Found")) className = "text-yellow-400";
             if (log.includes("Level Up"))
               className = "text-green-400 font-bold";
+            if (log.includes("Achievement"))
+              className = "text-purple-400 font-bold";
             return (
               <p key={index} className={className}>
                 {log}
